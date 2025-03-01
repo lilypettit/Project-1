@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: #E5E5E5;
+    background-color: #F5DEB3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +60,7 @@ body {
     width: 300px;
     text-align: center;
 }
+
 
 .card:hover {
     transform: scale(1.05);
@@ -123,17 +124,20 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Images on the Left */
+/* Images in a 2x2 Grid */
 .product-images {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* Help from ChatGPT to get the photos in a 2x2 grid */
     gap: 10px;
-    max-width: 40%;
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-images img {
-    width: 100%;
+    width: 100%; 
     height: auto;
+    max-height: 400px; 
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -179,7 +183,7 @@ body {
 }
 
 .card-button:hover {
-    background-color: #FF6B35;
+    background-color: FF6B35;
 }
 
 /* Responsive Design */
@@ -210,9 +214,107 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Section Dividers */
-.divider {
-    height: 2px;
-    background-color: #E5E5E5;
+/* Map Size Selector */
+.map-size-selector {
     margin: 20px 0;
+    text-align: left;
+}
+
+/* Dropdown Container */
+.map-size-selector {
+    margin-bottom: 20px; /* Space between each dropdown */
+}
+
+/* Label Styling */
+.map-size-selector label {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    cursor: pointer; /* Makes the label clickable */
+}
+
+/* Dropdown Styling */
+.map-size-selector select {
+    width: 100%;
+    max-width: 400px; /* Prevents dropdown from stretching too wide */
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--soft-gray);
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover Effect */
+.map-size-selector select:hover {
+    border-color: var(--primary-color);
+}
+
+/* Focus Effect */
+.map-size-selector select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(255, 107, 53, 0.5);
+}
+
+/* Star Rating Style */
+.star-rating {
+    margin: 30px 0;
+}
+
+.star-rating i {
+    color: #FF6B35; /* Use your accent color */
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+/* Sticky Header */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 999;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.sticky-header nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#back-to-top:hover {
+    background-color: var(--accent-color);
 }

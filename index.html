@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>My Map Adventures</title>
 </head>
 <body>
     <section class="card-section">
-        <h2>My Map Adventures </h2>
-        <p>Custom Travel Maps</p>
+        <h2>-</h2>
+        <p>Create your own travel story with our personalized push-pin maps! Choose your style, frame, size, and pin colors to match your adventures. Whether you’ve traveled the world already or you are planning your next trip, our maps make the perfect keepsake or gift.</p>
+
+        <!-- ChatGPT helped me figure out how to make the sticky header -->
+        <header class="sticky-header">
+            <h1>My Map Adventures</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#customize">Customize</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        
 
         <div class="product-section">
             <div class="product-images">
@@ -18,52 +32,189 @@
                 <img src="./images/ProductImage3.jpg" alt="Map Style 3">
                 <img src="./images/ProductImage4.jpg" alt="Map Style 4">
             </div>
+
         
             <div class="product-description">
-                <h3>Custom Travel Maps</h3>
-                <p>Create your own travel story with our personalized push-pin maps! Choose your style, frame, and pin colors to match your adventures. Whether you’ve traveled the world or are planning your next trip, our maps make the perfect keepsake or gift.</p>
+                <h3>Push Pin World Map (Pin Board)</h3>
+                <p>Desert Sunrise Color</p>
                 <ul>
-                    <li>Customizable design options</li>
-                    <li>High-quality materials</li>
-                    <li>Includes 100 colored push pins</li>
-                    <li>Available in multiple sizes</li>
+                    <li><i class="fas fa-globe"></i> Cherish your travels and plan for future trips!</li>
+                    <li><i class="fas fa-check-circle"></i> High-quality materials</li>
+                    <li><i class="fas fa-map-pin"></i> Includes 100 colored push pins</li>
+                    <li><i class="fas fa-expand"></i> Available in multiple sizes</li>
                 </ul>
-                <button class="card-button">Start Customizing</button>
+                
+                
+                <!--Used ChatGPT. Here is the prompt I used: Help me form some kind of drop down menu that let's you choose different map sizes-->
+                <!-- Map Size Dropdown -->
+                <div class="map-size-selector">
+                    <label for="map-size">Map Size:</label>
+                    <select id="map-size" name="map-size">
+                        <option value="small">Small (18x24 inches)</option>
+                        <option value="medium">Medium (24x36 inches)</option>
+                        <option value="large">Large (36x48 inches)</option>
+                        <option value="extra-large">Extra Large (48x60 inches)</option>
+                    </select>
+                </div>
+            
+                <!-- Format Dropdown -->
+                <div class="map-size-selector">
+                    <label for="map-format">Map Type:</label>
+                    <select id="map-format" name="map-format">
+                        <option value="push-pin">Push Pin Map</option>
+                        <option value="poster">Poster</option>
+                    </select>
+                </div>
+            
+                <!-- Legend Dropdown -->
+                <div class="map-size-selector">
+                    <label for="map-legend">Legend:</label>
+                    <select id="map-legend" name="map-legend">
+                        <option value="standard">Standard</option>
+                        <option value="personalized">Personalized</option>
+                    </select>
+                </div>
+            
+                <!-- Frame Dropdown -->
+                <div class="map-size-selector">
+                    <label for="map-frame">Frame:</label>
+                    <select id="map-frame" name="map-frame">
+                        <option value="none">No Frame</option>
+                        <option value="black">Wood Grain Black</option>
+                        <option value="white">Wood Grain White</option>
+                        <option value="walnut">Dark Walnut</option>
+                        <option value="oak">Natural Oak</option>
+                    </select>
+                </div>
+
+                <button class="card-button">Add to Cart</button>
             </div>
+
         </div>        
         
         <div class="card-container">
             <!-- Card 1 -->
             <div class="card" tabindex="0">
-                <img src="./images/Spain.jpg" alt="Home">
+                <img src="./images/WebsiteHeroImage.jpg" alt="Home">
                 <div class="card-content">
                     <h3 class="card-title">Home</h3>
-                    <p class="card-description">Push Pin World Map (Pin Board) - Desert Sunrise</p>
+                    <p class="card-description">Welcome! Visit our Home Page to learn more about our company, founders, story, and future. We are so happy you are here. Thank you!</p>
                     <button class="card-button">Explore</button>
                 </div>
             </div>
+
+            <!-- Card 2 (Reviews) -->
+        <div class="card" tabindex="0">
+            <img src="./images/CardImage.jpg" alt="Reviews">
+            <div class="card-content">
+                <h3 class="card-title">Reviews</h3>
+                <p class="card-description">"My favorite eye-catching and meaningful art. It gets me excited for my next trip and is a great conversation starter." —Justin P
+        </p>
+
+        <!-- Star Rating -->
+        <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+
+        <button class="card-button">See More</button>
+    </div>
+</div>
             
-            <!-- Card 2 -->
+            <!-- Card 3 -->
             <div class="card" tabindex="0">
-                <img src="./images/NewZealand.jpg" alt="Customize">
+                <img src="./images/CardPhoto.jpg" alt="Customize">
                 <div class="card-content">
                     <h3 class="card-title">Customize</h3>
-                    <p class="card-description">Design your very own travel map at the link below!</p>
+                    <p class="card-description">Try your hand at designing your very own travel map at the link below. We make it so easy that you won't be able to believe you helped create it.</p>
                     <button class="card-button">Create Your Own</button>
                 </div>
             </div>
             
-            <!-- Card 3 -->
-            <div class="card" tabindex="0">
-                <img src="./images/Fiji.jpg" alt="Reviews">
-                <div class="card-content">
-                    <h3 class="card-title">Reviews</h3>
-                    <p class="card-description">"Our favorite eye-catching and meaningful art. It gets us excited for our next travels and is such a great conversation starter for when we have guests." —Justin P</p> <!-- Put a 5 stars icon -->
-                    <button class="card-button">See More
-                    </button>
-                </div>
-            </div>
+            <!-- ChatGPT helped me write this code for the back to top button because I had no idea how to make it.-->
+            <script>
+                window.onscroll = function () {
+                    const backToTop = document.getElementById('back-to-top');
+                    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                        backToTop.style.display = 'block';
+                    } else {
+                        backToTop.style.display = 'none';
+                    }
+                };
+                
+                function scrollToTop() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+                </script>
+                
+            <button id="back-to-top" onclick="scrollToTop()">⬆ Back to Top</button>
+
+           
+
+
         </div>
+
+        <!--ChatGPT helped me with making this form and using tailwind!-->
+        <!-- Signup Form Section -->
+        <section class="bg-[var(--soft-gray)] py-12 mt-12">
+            <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-[var(--text-color)] mb-6">Sign Up for Our Newsletter</h2>
+            <p class="text-lg text-[var(--text-color)] mb-6">Get the latest updates delivered straight to your inbox.</p>
+            
+            <!-- Card Container for the Form -->
+            <div class="bg-white rounded-lg shadow-xl p-8 mx-4">
+                <form action="#" method="POST" class="space-y-6">
+                <!-- First Name -->
+                <div>
+                    <label for="firstname" class="block text-lg font-medium text-[var(--text-color)]">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="w-full px-4 py-3 border border-[var(--primary-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Your first name" required>
+                </div>
+        
+                <!-- Last Name -->
+                <div>
+                    <label for="lastname" class="block text-lg font-medium text-[var(--text-color)]">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="w-full px-4 py-3 border border-[var(--primary-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Your last name" required>
+                </div>
+        
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-lg font-medium text-[var(--text-color)]">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-[var(--primary-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Your email address" required>
+                </div>
+        
+                <!-- Phone Number -->
+                <div>
+                    <label for="phone" class="block text-lg font-medium text-[var(--text-color)]">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-[var(--primary-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Your phone number" required>
+                </div>
+        
+                <!-- State of Residency -->
+                <div>
+                    <label for="state" class="block text-lg font-medium text-[var(--text-color)]">State of Residency</label>
+                    <select id="state" name="state" class="w-full px-4 py-3 border border-[var(--primary-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" required>
+                    <option value="">Select your state</option>
+                    <option value="Alabama">Utah</option>
+                    <option value="Alaska">North Carolina</option>
+                    <option value="Arizona">Florida</option>
+                    <option value="Arkansas">Tennessee</option>
+                    <option value="California">California</option>
+                    <!-- Add more states as needed -->
+                    </select>
+                </div>
+        
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit" class="w-full py-3 bg-[var(--primary-color)] text-white font-semibold rounded-lg hover:bg-[var(--accent-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">Sign Up</button>
+                </div>
+                </form>
+            </div>
+            </div>
+        </section>
+  
+          
     </section>
 </body>
 </html>
