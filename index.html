@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Optional Favicon -->
     <title>My Map Adventures</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
         <h2>-</h2>
         <p>Create your own travel story with our personalized push-pin maps! Choose your style, frame, size, and pin colors to match your adventures. Whether you’ve traveled the world already or you are planning your next trip, our maps make the perfect keepsake or gift.</p>
 
-        <!-- ChatGPT helped me figure out how to make the sticky header -->
+        <!-- ChatGPT helped me figure out how to make the optional sticky header -->
         <header class="sticky-header">
             <h1>My Map Adventures</h1>
             <nav>
@@ -24,7 +24,7 @@
             </nav>
         </header>
         
-
+        <!-- 4/5+ images used -->
         <div class="product-section">
             <div class="product-images">
                 <img src="./images/ProductImageDesertSunset.jpg" alt="Map Style 1">
@@ -38,10 +38,10 @@
                 <h3>Push Pin World Map (Pin Board)</h3>
                 <p>Desert Sunrise Color</p>
                 <ul>
-                    <li><i class="fas fa-globe"></i> Cherish your travels and plan for future trips!</li>
-                    <li><i class="fas fa-check-circle"></i> High-quality materials</li>
-                    <li><i class="fas fa-map-pin"></i> Includes 100 colored push pins</li>
-                    <li><i class="fas fa-expand"></i> Available in multiple sizes</li>
+                    <li><i class="fas fa-globe"></i> Cherish your travels and plan for future trips!</li> <!-- 1/4 custom icons -->
+                    <li><i class="fas fa-check-circle"></i> High-quality materials</li> <!-- 2/4 custom icons -->
+                    <li><i class="fas fa-map-pin"></i> Includes 100 colored push pins</li> <!-- 3/4 custom icons -->
+                    <li><i class="fas fa-expand"></i> Available in multiple sizes</li> <!-- 4/4 custom icons -->
                 </ul>
                 
                 
@@ -87,11 +87,14 @@
                     </select>
                 </div>
 
-                <button class="card-button">Add to Cart</button>
+                 <!-- tooltip button  -->
+                <button class="card-button" title="Click to add your customized map to the cart!">Add to Cart</button>
+
             </div>
 
         </div>        
         
+        <!-- 5/7 images -->
         <div class="card-container">
             <!-- Card 1 -->
             <div class="card" tabindex="0">
@@ -99,10 +102,12 @@
                 <div class="card-content">
                     <h3 class="card-title">Home</h3>
                     <p class="card-description">Welcome! Visit our Home Page to learn more about our company, founders, story, and future. We are so happy you are here. Thank you!</p>
-                    <button class="card-button">Explore</button>
+                    <button class="card-button" title="Start exploring our product catalog">Explore</button> <!-- using tooltips -->
+
                 </div>
             </div>
 
+            <!-- 6/7 images -->
             <!-- Card 2 (Reviews) -->
         <div class="card" tabindex="0">
             <img src="./images/CardImage.jpg" alt="Reviews">
@@ -120,21 +125,22 @@
             <i class="fas fa-star-half-alt"></i>
         </div>
 
-        <button class="card-button">See More</button>
+        <button class="card-button" title="See what customers are saying">See More</button>
+        <!-- using tooltips -->
     </div>
 </div>
-            
+            <!-- 7/7 images -->
             <!-- Card 3 -->
             <div class="card" tabindex="0">
                 <img src="./images/CardPhoto.jpg" alt="Customize">
                 <div class="card-content">
                     <h3 class="card-title">Customize</h3>
                     <p class="card-description">Try your hand at designing your very own travel map at the link below. We make it so easy that you won't be able to believe you helped create it.</p>
-                    <button class="card-button">Create Your Own</button>
+                    <button class="card-button" title="Add your customized map to the cart!">Create Your Own</button> <!-- using tooltips -->
                 </div>
             </div>
             
-            <!-- ChatGPT helped me write this code for the back to top button because I had no idea how to make it.-->
+            <!-- ChatGPT helped me write this code for the optional back to top button because I had no idea how to make it.-->
             <script>
                 window.onscroll = function () {
                     const backToTop = document.getElementById('back-to-top');
@@ -152,13 +158,14 @@
                 
             <button id="back-to-top" onclick="scrollToTop()">⬆ Back to Top</button>
 
-           
-
 
         </div>
 
-        <!--ChatGPT helped me with making this form and using tailwind!-->
+        <!-- UTD presentation skill used here -->
+        <!-- Optional task +20 because I made 5 dropdown menus! -->
+        <!--ChatGPT helped this form use tailwind! Optional task:)-->
         <!-- Signup Form Section -->
+    <footer>
         <section class="bg-[var(--soft-gray)] py-12 mt-12">
             <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-semibold text-[var(--text-color)] mb-6">Sign Up for Our Newsletter</h2>
@@ -212,8 +219,55 @@
                 </form>
             </div>
             </div>
-        </section>
+
+             <!-- Optional Video -->
+            <div class="video-container">
+                <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/HrNCKDdfuG8" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+
+
+            <!-- Optional SVGs with tailwind styling -->
+            <!-- Footer Section -->
+            <footer class="bg-[var(--secondary-color)] py-8 mt-12">
+                <div class="max-w-6xl mx-auto text-center">
+                <div class="flex justify-center space-x-6">
+                    <!-- Instagram Icon -->
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram-svgrepo-com (1).svg" alt="Instagram" viewBox="0 0 24 24" class="w-1 h-1 text-[var(--primary-color)] hover:text-[var(--accent-color)] transition-all">
+                    </a>
+                    
+                    <!-- TikTok Icon -->
+                    <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+                    <img src="images/tiktok-svgrepo-com (2).svg" alt="TikTok" class="w-8 h-8 text-[var(--primary-color)] hover:text-[var(--accent-color)] transition-all">
+                    </a>
+            
+                    <!-- LinkedIn Icon -->
+                    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin-rounded-svgrepo-com.svg" alt="LinkedIn" class="w-8 h-8 text-[var(--primary-color)] hover:text-[var(--accent-color)] transition-all">
+                    </a>
+            
+                    <!-- Facebook Icon -->
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <img src="images/facebook-176-svgrepo-com.svg" alt="Facebook" class="w-8 h-8 text-[var(--primary-color)] hover:text-[var(--accent-color)] transition-all">
+                    </a>
+                </div>
+                
+
+                <p class="text-sm text-[var(--text-color)] mt-6">&copy; 2025 My Map Adventures. All rights reserved.</p>
+                </div>
+            </footer>
   
+              </div>
+
+        </section>
+    </footer>
           
     </section>
 </body>

@@ -1,5 +1,7 @@
+/* Used 2 custom fonts. The import link was help from ChatGPT*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
 
+/* Outline for my consistent color scheme */
 :root {
     --primary-color: #0077B6;       /* Ocean Blue */
     --secondary-color: #F5DEB3;     /* Sand Beige */
@@ -18,7 +20,7 @@
 
 body {
     background-color: #F5DEB3;
-    display: flex;
+    display: flex; /* Strategic use of display flex */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -44,7 +46,7 @@ body {
 
 /* Card Container */
 .card-container {
-    display: flex;
+    display: flex; /* Strategic use of display flex */
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -61,7 +63,7 @@ body {
     text-align: center;
 }
 
-
+/* Optional hover! */
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -99,6 +101,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Optional hover! */
 .card-button:hover {
     background-color: #0056b3;
 }
@@ -182,6 +185,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Optional hover! */
 .card-button:hover {
     background-color: FF6B35;
 }
@@ -271,6 +275,7 @@ body {
     margin-right: 5px;
 }
 
+/* Optional smooth scroll */
 html {
     scroll-behavior: smooth;
   }
@@ -297,6 +302,7 @@ html {
     font-weight: bold;
 }
 
+/* Optional hover! */
 .sticky-header nav a:hover {
     color: var(--accent-color);
 }
@@ -315,6 +321,20 @@ html {
     display: none;
 }
 
+/* Optional hover! */
 #back-to-top:hover {
     background-color: var(--accent-color);
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--soft-gray); /* Match your color scheme */
+}
+
+iframe {
+    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
 }
