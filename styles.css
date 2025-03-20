@@ -15,25 +15,119 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
+
+/* Mobile-First Layout */
 body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+/* body {
     background-color: #F5DEB3;
-    display: flex; /* Strategic use of display flex */
+    display: flex;  Strategic use of display flex 
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #333333;
+    color: #333333; 
+} */ 
+
+/* Sticky Header */
+.sticky-header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
 }
 
 /* Card Section */
 .card-section {
     text-align: center;
     padding: 40px;
-    max-width: 1200px;
+    max-width: 800px;
+    margin: 100px auto 20px;
 }
 
+/* Product Section with CSS Grid */
+.product-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+/* Product Images */
+.product-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.product-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Product Description */
+.product-description {
+    text-align: left;
+    padding: 20px;
+}
+
+/* Buttons */
+.card-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.card-button:hover {
+    background-color: #ff512f;
+    transform: scale(1.05);
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+    .product-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-section {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+/*
 .card-section h2 {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -44,15 +138,15 @@ body {
     margin-bottom: 30px;
 }
 
-/* Card Container */
+/* Card Container 
 .card-container {
-    display: flex; /* Strategic use of display flex */
+    display: flex; /* Strategic use of display flex 
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
+} */
 
-/* Card Styles */
+/* Card Styles 
 .card {
     background-color: white;
     border-radius: 10px;
@@ -63,7 +157,7 @@ body {
     text-align: center;
 }
 
-/* Optional hover! */
+/* Optional hover! 
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -101,12 +195,12 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Optional hover! */
+/* Optional hover! 
 .card-button:hover {
     background-color: #0056b3;
 }
 
-/* Responsive Design */
+/* Responsive Design 
 @media (max-width: 768px) {
     .card-container {
         flex-direction: column;
@@ -114,7 +208,7 @@ body {
     }
 }
 
-/* Product Section Layout */
+/* Product Section Layout 
 .product-section {
     display: flex;
     justify-content: space-between;
@@ -127,10 +221,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Images in a 2x2 Grid */
+/* Images in a 2x2 Grid 
 .product-images {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Help from ChatGPT to get the photos in a 2x2 grid */
+    grid-template-columns: repeat(2, 1fr); /* Help from ChatGPT to get the photos in a 2x2 grid 
     gap: 10px;
     max-width: 50%;
     justify-content: center;
@@ -145,7 +239,7 @@ body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Product Description on the Right */
+/* Product Description on the Right 
 .product-description {
     max-width: 55%;
     text-align: left;
@@ -173,7 +267,7 @@ body {
     font-size: 1rem;
 }
 
-/* Button */
+/* Button 
 .card-button {
     background-color: #007BFF;
     color: white;
@@ -185,12 +279,12 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Optional hover! */
+/* Optional hover! 
 .card-button:hover {
     background-color: FF6B35;
 }
 
-/* Responsive Design */
+/* Responsive Design 
 @media (max-width: 768px) {
     .product-section {
         flex-direction: column;
@@ -199,7 +293,7 @@ body {
 
     .product-images {
         max-width: 100%;
-        grid-template-columns: repeat(2, 1fr); /* 2 images per row on smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on smaller screens 
     }
 
     .product-description {
@@ -208,40 +302,40 @@ body {
     }
 }
 
-/* Poppins for the product title */
+/* Poppins for the product title 
 .product-description h3 {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Roboto for the paragraph content */
+/* Roboto for the paragraph content 
 .product-description p, ul {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Map Size Selector */
+/* Map Size Selector 
 .map-size-selector {
     margin: 20px 0;
     text-align: left;
 }
 
-/* Dropdown Container */
+/* Dropdown Container 
 .map-size-selector {
-    margin-bottom: 20px; /* Space between each dropdown */
+    margin-bottom: 20px; /* Space between each dropdown 
 }
 
-/* Label Styling */
+/* Label Styling 
 .map-size-selector label {
     display: block;
     font-size: 1.2rem;
     color: var(--text-color);
     margin-bottom: 10px;
-    cursor: pointer; /* Makes the label clickable */
+    cursor: pointer; /* Makes the label clickable 
 }
 
-/* Dropdown Styling */
+/* Dropdown Styling 
 .map-size-selector select {
     width: 100%;
-    max-width: 400px; /* Prevents dropdown from stretching too wide */
+    max-width: 400px; /* Prevents dropdown from stretching too wide 
     padding: 10px;
     font-size: 1rem;
     border: 2px solid var(--soft-gray);
@@ -253,35 +347,35 @@ body {
     transition: border-color 0.3s ease;
 }
 
-/* Hover Effect */
+/* Hover Effect 
 .map-size-selector select:hover {
     border-color: var(--primary-color);
 }
 
-/* Focus Effect */
+/* Focus Effect 
 .map-size-selector select:focus {
     border-color: var(--accent-color);
     box-shadow: 0 0 5px rgba(255, 107, 53, 0.5);
 }
 
-/* Star Rating Style */
+/* Star Rating Style 
 .star-rating {
     margin: 30px 0;
 }
 
 .star-rating i {
-    color: #FF6B35; /* Use your accent color */
+    color: #FF6B35; /* Use your accent color 
     font-size: 1.5rem;
     margin-right: 5px;
 }
 
-/* Optional smooth scroll */
+/* Optional smooth scroll 
 html {
     scroll-behavior: smooth;
   }
   
 
-/* Sticky Header */
+/* Sticky Header 
 .sticky-header {
     position: fixed;
     top: 0;
@@ -302,12 +396,12 @@ html {
     font-weight: bold;
 }
 
-/* Optional hover! */
+/* Optional hover! 
 .sticky-header nav a:hover {
     color: var(--accent-color);
 }
 
-/* Back to Top Button */
+/* Back to Top Button 
 #back-to-top {
     position: fixed;
     bottom: 20px;
@@ -321,7 +415,7 @@ html {
     display: none;
 }
 
-/* Optional hover! */
+/* Optional hover! 
 #back-to-top:hover {
     background-color: var(--accent-color);
 }
@@ -330,7 +424,7 @@ html {
     display: flex;
     justify-content: center;
     padding: 20px;
-    background-color: var(--soft-gray); /* Match your color scheme */
+    background-color: var(--soft-gray); /* Match your color scheme 
 }
 
 iframe {
