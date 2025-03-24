@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Map Adventures</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Optional Favicon -->
-    <title>My Map Adventures</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
-    <!-- ChatGPT helped me figure out how to make the optional sticky header -->
     <header class="sticky-header">
         <h1>My Map Adventures</h1>
-        <nav>
+        <nav role="navigation" aria-label="Main Navigation">
             <a href="#home">Home</a>
             <a href="#customize">Customize</a>
             <a href="#reviews">Reviews</a>
@@ -21,80 +19,14 @@
         </nav>
     </header>
 
-     <!-- Main Section -->
-     <main class="card-section">
-        <h2>Custom Push Pin Travel Maps</h2>
-        <p>Create your own travel story with our personalized maps!</p>
-
-
-        <!-- Product Section with Grid -->
-        <div class="product-section">
-            <div class="product-images">
-                <img src="./images/ProductImage1.jpg" alt="Map Style 1">
-                <img src="./images/ProductImage2.jpg" alt="Map Style 2">
-                <img src="./images/ProductImage3.jpg" alt="Map Style 3">
-                <img src="./images/ProductImage4.jpg" alt="Map Style 4">
-            </div>
-
-            <div class="product-description">
-                <h3>Push Pin World Map</h3>
-                <p>Available in various sizes and colors.</p>
-                <ul>
-                    <li><i class="fas fa-globe"></i> Plan and track your travels</li>
-                    <li><i class="fas fa-check-circle"></i> High-quality materials</li>
-                    <li><i class="fas fa-map-pin"></i> Includes 100 push pins</li>
-                </ul>
-
-                <!-- Map Size Selector -->
-                <div class="map-size-selector">
-                    <label for="map-size">Choose Size:</label>
-                    <select id="map-size" name="map-size">
-                        <option value="small">Small (18x24")</option>
-                        <option value="medium">Medium (24x36")</option>
-                        <option value="large">Large (36x48")</option>
-                    </select>
-                </div>
-
-                <button class="card-button">Add to Cart</button>
-            </div>
-        </div>
-    </main>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" onclick="scrollToTop()">⬆ Back to Top</button>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 My Map Adventures. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript for Smooth Scroll -->
-    <script>
-        window.onscroll = function () {
-            const backToTop = document.getElementById('back-to-top');
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                backToTop.style.display = 'block';
-            } else {
-                backToTop.style.display = 'none';
-            }
-        };
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-
-</body>
-</html>
-
-
- <!-- Main Section 
+    <main>
     <section class="card-section">
+        <h2>-</h2>
         <h2>-</h2>
         <p>Create your own travel story with our personalized push-pin maps! Choose your style, frame, size, and pin colors to match your adventures. Whether you’ve traveled the world already or you are planning your next trip, our maps make the perfect keepsake or gift.</p>
 
         
-        <!-- 4/5+ images used 
+        <!-- 4/5+ images used -->
         <div class="product-section">
             <div class="product-images">
                 <img src="./images/ProductImageDesertSunset.jpg" alt="Map Style 1">
@@ -108,15 +40,15 @@
                 <h3>Push Pin World Map (Pin Board)</h3>
                 <p>Desert Sunrise Color</p>
                 <ul>
-                    <li><i class="fas fa-globe"></i> Cherish your travels and plan for future trips!</li> <!-- 1/4 custom icons
-                    <li><i class="fas fa-check-circle"></i> High-quality materials</li> <!-- 2/4 custom icons 
-                    <li><i class="fas fa-map-pin"></i> Includes 100 colored push pins</li> <!-- 3/4 custom icons 
+                    <li><i class="fas fa-globe"></i> Cherish your travels and plan for future trips!</li> <!-- 1/4 custom icons -->
+                    <li><i class="fas fa-check-circle"></i> High-quality materials</li> <!-- 2/4 custom icons -->
+                    <li><i class="fas fa-map-pin"></i> Includes 100 colored push pins</li> <!-- 3/4 custom icons -->
                     <li><i class="fas fa-expand"></i> Available in multiple sizes</li> <!-- 4/4 custom icons -->
                 </ul>
                 
                 
                 <!--Used ChatGPT. Here is the prompt I used: Help me form some kind of drop down menu that let's you choose different map sizes-->
-                <!-- Map Size Dropdown 
+                <!-- Map Size Dropdown -->
                 <div class="map-size-selector">
                     <label for="map-size">Map Size:</label>
                     <select id="map-size" name="map-size">
@@ -127,7 +59,7 @@
                     </select>
                 </div>
             
-                <!-- Format Dropdown 
+                <!-- Format Dropdown -->
                 <div class="map-size-selector">
                     <label for="map-format">Map Type:</label>
                     <select id="map-format" name="map-format">
@@ -136,7 +68,7 @@
                     </select>
                 </div>
             
-                <!-- Legend Dropdown 
+                <!-- Legend Dropdown -->
                 <div class="map-size-selector">
                     <label for="map-legend">Legend:</label>
                     <select id="map-legend" name="map-legend">
@@ -145,7 +77,7 @@
                     </select>
                 </div>
             
-                <!-- Frame Dropdown
+                <!-- Frame Dropdown -->
                 <div class="map-size-selector">
                     <label for="map-frame">Frame:</label>
                     <select id="map-frame" name="map-frame">
@@ -157,16 +89,16 @@
                     </select>
                 </div>
 
-                 <!-- tooltip button 
+                 <!-- tooltip button  -->
                 <button class="card-button" title="Click to add your customized map to the cart!">Add to Cart</button>
 
             </div>
 
         </div>        
         
-        <!-- 5/7 images 
+        <!-- 5/7 images -->
         <div class="card-container">
-            <!-- Card 1 
+            <!-- Card 1 -->
             <div class="card" tabindex="0">
                 <img src="./images/WebsiteHeroImage.jpg" alt="Home">
                 <div class="card-content">
@@ -178,7 +110,7 @@
             </div>
 
             <!-- 6/7 images -->
-            <!-- Card 2 (Reviews) 
+            <!-- Card 2 (Reviews) -->
         <div class="card" tabindex="0">
             <img src="./images/CardImage.jpg" alt="Reviews">
             <div class="card-content">
@@ -186,7 +118,7 @@
                 <p class="card-description">"My favorite eye-catching and meaningful art. It gets me excited for my next trip and is a great conversation starter." —Justin P
         </p>
 
-        <!-- Star Rating 
+        <!-- Star Rating -->
         <div class="star-rating">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -200,7 +132,7 @@
     </div>
 </div>
             <!-- 7/7 images -->
-            <!-- Card 3 
+            <!-- Card 3 -->
             <div class="card" tabindex="0">
                 <img src="./images/CardPhoto.jpg" alt="Customize">
                 <div class="card-content">
@@ -210,7 +142,7 @@
                 </div>
             </div>
             
-            <!-- ChatGPT helped me write this code for the optional back to top button because I had no idea how to make it.
+            <!-- ChatGPT helped me write this code for the optional back to top button because I had no idea how to make it.-->
             <script>
                 window.onscroll = function () {
                     const backToTop = document.getElementById('back-to-top');
@@ -230,67 +162,62 @@
 
 
         </div>
+    </main>
 
         <!-- UTD presentation skill used here -->
         <!-- Optional task +20 because I made 5 dropdown menus! -->
         <!--ChatGPT helped this form use tailwind! Optional task:)-->
-        <!-- Signup Form Section 
+        <!-- Signup Form Section -->
     <footer>
         <section class="bg-[var(--soft-gray)] py-12 mt-12">
             <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-semibold text-[var(--text-color)] mb-6">Sign Up for Our Newsletter</h2>
             <p class="text-lg text-[var(--text-color)] mb-6">Get the latest updates delivered straight to your inbox.</p>
             
-            <!-- Card Container for the Form 
-            <div class="bg-white rounded-lg shadow-xl p-8 mx-4">
-                <form action="#" method="POST" class="space-y-6">
-                <!-- First Name 
+            <form action="#" method="POST" class="space-y-6" role="form" aria-label="Newsletter Signup Form">
+                <!-- First Name -->
                 <div>
                     <label for="firstname" class="block text-lg font-medium text-[var(--text-color)]">First Name</label>
-                    <input type="text" id="firstname" name="firstname" class="w-full px-4 py-3 border border-[var(--primary-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Your first name" required>
+                    <input type="text" id="firstname" name="firstname" aria-required="true" required>
                 </div>
-        
-                <!-- Last Name 
+                
+                <!-- Last Name -->
                 <div>
                     <label for="lastname" class="block text-lg font-medium text-[var(--text-color)]">Last Name</label>
-                    <input type="text" id="lastname" name="lastname" class="w-full px-4 py-3 border border-[var(--primary-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Your last name" required>
+                    <input type="text" id="lastname" name="lastname" aria-required="true" required>
                 </div>
-        
-                <!-- Email 
+                
+                <!-- Email -->
                 <div>
                     <label for="email" class="block text-lg font-medium text-[var(--text-color)]">Email</label>
-                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-[var(--primary-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Your email address" required>
+                    <input type="email" id="email" name="email" aria-required="true" required>
                 </div>
-        
-                <!-- Phone Number 
+                
+                <!-- Phone Number -->
                 <div>
                     <label for="phone" class="block text-lg font-medium text-[var(--text-color)]">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-[var(--primary-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Your phone number" required>
+                    <input type="tel" id="phone" name="phone" aria-required="true" required>
                 </div>
-        
-                <!-- State of Residency 
+                
+                <!-- State of Residency -->
                 <div>
                     <label for="state" class="block text-lg font-medium text-[var(--text-color)]">State of Residency</label>
-                    <select id="state" name="state" class="w-full px-4 py-3 border border-[var(--primary-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" required>
-                    <option value="">Select your state</option>
-                    <option value="Alabama">Utah</option>
-                    <option value="Alaska">North Carolina</option>
-                    <option value="Arizona">Florida</option>
-                    <option value="Arkansas">Tennessee</option>
-                    <option value="California">California</option>
-                    <!-- Add more states as needed 
+                    <select id="state" name="state" aria-required="true" required>
+                        <option value="">Select your state</option>
+                        <!-- Add more states as needed -->
                     </select>
                 </div>
-        
-                <!-- Submit Button 
+                
+                <!-- Submit Button -->
                 <div>
-                    <button type="submit" class="w-full py-3 bg-[var(--primary-color)] text-white font-semibold rounded-lg hover:bg-[var(--accent-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">Sign Up</button>
+                    <button type="submit" aria-label="Submit Form">Sign Up</button>
                 </div>
-                </form>
-            </div>
-            </div>
-
-             <!-- Optional Video 
+                
+                <!-- Example Error Handling -->
+                <div id="error-message" role="alert" aria-live="assertive"></div>
+            </form>
+            
+             <!-- Optional Video -->
             <div class="video-container">
                 <iframe width="560" height="315" 
                     src="https://www.youtube.com/embed/HrNCKDdfuG8" 
@@ -303,27 +230,27 @@
             
 
 
-            <!-- Optional SVGs with tailwind styling 
-            <!-- Footer Section 
+            <!-- Optional SVGs with tailwind styling -->
+            <!-- Footer Section -->
             <footer class="bg-[var(--secondary-color)] py-8 mt-12">
                 <div class="max-w-6xl mx-auto text-center">
                 <div class="flex justify-center space-x-6">
-                    <!-- Instagram Icon 
+                    <!-- Instagram Icon -->
                     <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
                     <img src="images/instagram-svgrepo-com (1).svg" alt="Instagram" viewBox="0 0 24 24" class="w-1 h-1 text-[var(--primary-color)] hover:text-[var(--accent-color)] transition-all">
                     </a>
                     
-                    <!-- TikTok Icon 
+                    <!-- TikTok Icon -->
                     <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
                     <img src="images/tiktok-svgrepo-com (2).svg" alt="TikTok" class="w-8 h-8 text-[var(--primary-color)] hover:text-[var(--accent-color)] transition-all">
                     </a>
             
-                    <!-- LinkedIn Icon 
+                    <!-- LinkedIn Icon -->
                     <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
                     <img src="images/linkedin-rounded-svgrepo-com.svg" alt="LinkedIn" class="w-8 h-8 text-[var(--primary-color)] hover:text-[var(--accent-color)] transition-all">
                     </a>
             
-                    <!-- Facebook Icon 
+                    <!-- Facebook Icon -->
                     <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
                     <img src="images/facebook-176-svgrepo-com.svg" alt="Facebook" class="w-8 h-8 text-[var(--primary-color)] hover:text-[var(--accent-color)] transition-all">
                     </a>
@@ -337,8 +264,5 @@
               </div>
 
         </section>
-    </footer>
-          
-    </section>
 </body>
-</html> -->
+</html>
