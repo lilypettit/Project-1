@@ -42,6 +42,7 @@ body {
     grid-template-rows: [header-start] 100px [header-end] [content-start] 1fr [content-end];
 }
 
+/* Perplexity AI helped me on this part with the header-start, etc. */
 .sticky-header {
     grid-column: header-start / header-end;
     grid-row: header-start / header-end;
@@ -65,6 +66,7 @@ html {
     width: 90%;
 }
 
+/* Perplexity AI helped me on this part with the keyframes */
 /* Define the fadeIn keyframe animation */
 @keyframes fadeIn {
     from {
@@ -131,6 +133,7 @@ html {
     display: none;
 }
 
+/* Perplexity AI helped me on this part with the hamburger */
 .hamburger {
     position: absolute;
     top: 15px;
@@ -264,7 +267,6 @@ Full mobile responsivity through media queries and flexible layouts to ensure th
     margin-right: 5px;
 }
 
-/* Modify .card-container to use CSS Grid */
 .card-container {
     display: grid;
     gap: 20px; /* Optional: Use CSS gap property effectively with both Grid and Flexbox layouts */
@@ -317,8 +319,8 @@ Full mobile responsivity through media queries and flexible layouts to ensure th
 
 @media screen and (max-width: 768px) {
     img {
-        width: 100%; /* Make sure image width is 100% on mobile */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%; 
+        height: auto; 
     }
 }
 
@@ -338,6 +340,7 @@ Full mobile responsivity through media queries and flexible layouts to ensure th
     padding-bottom: 30px;
 }
 
+/* Perplexity AI helped me on this part with the keyframe animation */
 /* Define the slideIn keyframe animation */
 @keyframes slideIn {
     from {
@@ -352,10 +355,11 @@ body {
     min-height: 100vh; 
     display: grid; 
     grid-template-rows: 1fr auto;
-    padding-top: 180px;
+    padding-top: 200px;
 }
 
 
+/* Perplexity AI helped me on this part with the dark mode toggle */
 #darkModeToggle {
     background-color: var(--text-color);
     color: var(--background-color);
@@ -365,6 +369,11 @@ body {
     font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s;
+}
+
+[data-theme="dark"] {
+    --background-color: #333;
+    --text-color: #fff;
 }
 
 #darkModeToggle:hover {
@@ -404,23 +413,22 @@ footer {
 .footer-social-icons {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Add space between each icon */
-    padding: 20px; /* Add padding around the icons container */
+    gap: 10px; 
+    padding: 20px; 
 }
 
 /* Optional: Customize individual icons for better spacing */
 .footer-social-icons img {
-    padding: 10px; /* Optional padding around each icon */
-    border-radius: 50%; /* Optional: make icons round with a border radius */
+    padding: 10px; 
+    border-radius: 50%; 
     transition: transform 0.3s ease; /* Smooth scale on hover */
 }
 
 .footer-social-icons img:hover {
-    transform: scale(1.1); /* Optional: make the icons grow a bit when hovered */
+    transform: scale(1.1); 
 }
 
 
-/* Responsive Design */
 
 /* Mobile First: 1 Column */
 @media (max-width: 600px) {
@@ -443,6 +451,7 @@ footer {
     }
 }
 
+/* Perplexity AI helped me on this part with the custom focus */
 :focus { /* Optional: Add custom focus states to interactive elements for keyboard accessibility */ 
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
@@ -491,6 +500,7 @@ footer {
     }
 }
 
+/* Perplexity AI helped me on this part with parallax */
 .parallax-container {
     height: 100vh;
     overflow-x: hidden;
