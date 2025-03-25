@@ -4,10 +4,17 @@
 /* CSS Variables for Color Scheme */
 :root {
     --primary-color: #0077B6;       /* Ocean Blue */
-    --secondary-color: #F5DEB3;     /* Sand Beige */
+    --secondary-color: #d3b79b;     /* Sand Beige */
     --accent-color: #FF6B35;        /* Compass Red */
     --text-color: #333333;          /* Deep Charcoal */
     --soft-gray: #E5E5E5;           /* Soft Gray */
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --background-color: #121212;
+    --text-color: #fff;
+    --border-color: #444;
 }
 
 /* Universal Reset */
@@ -71,6 +78,7 @@ html {
 /* Optional: Implement a "sticky" element that uses position: sticky */
 .sticky-header {
     position: fixed;
+    padding: 20px 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -185,7 +193,6 @@ Full mobile responsivity through media queries and flexible layouts to ensure th
 .product-images img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Optional: Use the CSS object-fit property to handle responsive images elegantly */
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -195,6 +202,7 @@ Full mobile responsivity through media queries and flexible layouts to ensure th
     grid-column: 2;
     text-align: left;
     padding: 20px;
+    text-align: left;
 }
 
 .product-description h3 {
@@ -211,7 +219,6 @@ Full mobile responsivity through media queries and flexible layouts to ensure th
     font-size: 1rem;
 }
 
-/* Buttons */
 .card-button {
     background-color: var(--primary-color);
     color: white;
@@ -263,6 +270,7 @@ Full mobile responsivity through media queries and flexible layouts to ensure th
     gap: 20px; /* Optional: Use CSS gap property effectively with both Grid and Flexbox layouts */
     justify-content: center;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 /* Mobile First: Single Column */
@@ -286,6 +294,10 @@ Full mobile responsivity through media queries and flexible layouts to ensure th
     }
 }
 
+.video-container {
+    margin-top: 100px; 
+}
+
 
 /* Individual Cards */
 .card {
@@ -303,14 +315,27 @@ Full mobile responsivity through media queries and flexible layouts to ensure th
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 768px) {
+    img {
+        width: 100%; /* Make sure image width is 100% on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
 .card img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: cover; /* Optional: Use the CSS object-fit property to handle responsive images elegantly */
 }
 
 .card-content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    height: 100%;
+    padding-bottom: 30px;
 }
 
 /* Define the slideIn keyframe animation */
@@ -324,12 +349,27 @@ Full mobile responsivity through media queries and flexible layouts to ensure th
 }
 
 body {
-    min-height: 100vh; /* Ensure the body fills the viewport height */
-    display: grid; /* Use grid to position elements */
-    grid-template-rows: 1fr auto; /* Define grid rows */
+    min-height: 100vh; 
+    display: grid; 
+    grid-template-rows: 1fr auto;
+    padding-top: 180px;
 }
 
 
+#darkModeToggle {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#darkModeToggle:hover {
+    background-color: var(--border-color);
+}
 
 
 /* Back to Top Button */
@@ -355,13 +395,34 @@ body {
 footer {
     text-align: center;
     margin-top: 40px;
-    padding: 20px;
+    padding: 20px 20px;
+    margin-top: 40px;
     background: var(--secondary-color);
 }
 
+/* CSS for the social media icon container */
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add space between each icon */
+    padding: 20px; /* Add padding around the icons container */
+}
+
+/* Optional: Customize individual icons for better spacing */
+.footer-social-icons img {
+    padding: 10px; /* Optional padding around each icon */
+    border-radius: 50%; /* Optional: make icons round with a border radius */
+    transition: transform 0.3s ease; /* Smooth scale on hover */
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.1); /* Optional: make the icons grow a bit when hovered */
+}
+
+
 /* Responsive Design */
 
-/* 📱 Mobile First: 1 Column */
+/* Mobile First: 1 Column */
 @media (max-width: 600px) {
     .product-section {
         grid-template-columns: 1fr;
@@ -403,7 +464,13 @@ footer {
     }
 }
 
-/* 🖥️ Desktop: Wider Layout */
+.newsletter-section {
+    text-align: left;
+    padding-bottom: 30px; 
+    margin-top: 30px; 
+}
+
+/* Desktop: Wider Layout */
 @media (min-width: 1024px) {
     .product-section {
         grid-template-columns: 1fr 1fr;
@@ -429,6 +496,7 @@ footer {
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 1px;
+    padding-top: 60px;
 }
 
 .layer1 {
@@ -474,4 +542,79 @@ footer {
 .sticky-cta .card-button:hover {
     background-color: var(--accent-color);
     transform: scale(1.05); /* Scale effect on hover */
+}
+
+input, select, textarea {
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; 
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 2px solid #FF6B35;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--button-color);
+    outline: none;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333; 
+}
+
+button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b89b7e; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+    max-width: 400px; 
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #FF6B35; 
+    border-radius: 8px; 
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--input-text-color);
+}
+
+input, select, textarea {
+    font-size: 1rem;
+    margin-bottom: 12px; /* Adds spacing below inputs */
+}
+
+input:focus, select:focus, textarea:focus {
+    transition: border-color 0.3s ease;
+    border-color: var(--button-color);
+}
+
+@media (max-width: 600px) {
+    input, select, textarea {
+        width: 100%;
+        padding: 12px; /* Larger padding for easier touch interaction */
+    }
+
+    button {
+        width: 100%; /* Full-width button for mobile devices */
+    }
 }
