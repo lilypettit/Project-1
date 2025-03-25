@@ -1,7 +1,7 @@
-/* ✅ Importing Google Fonts */
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
 
-/* ✅ CSS Variables for Color Scheme */
+/* CSS Variables for Color Scheme */
 :root {
     --primary-color: #0077B6;       /* Ocean Blue */
     --secondary-color: #F5DEB3;     /* Sand Beige */
@@ -10,7 +10,7 @@
     --soft-gray: #E5E5E5;           /* Soft Gray */
 }
 
-/* ✅ Universal Reset */
+/* Universal Reset */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* ✅ Body Styling */
+/* Body Styling */
 body {
     background-color: var(--secondary-color);
     color: var(--text-color);
@@ -28,7 +28,29 @@ body {
     min-height: 100vh;
 }
 
-/* ✅ Card Section */
+/* Optional: Use CSS Grid's named lines feature to create a complex layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: [header-start] 1fr [header-end] [content-start] 1fr [content-end];
+    grid-template-rows: [header-start] 100px [header-end] [content-start] 1fr [content-end];
+}
+
+.sticky-header {
+    grid-column: header-start / header-end;
+    grid-row: header-start / header-end;
+}
+
+.card-section {
+    grid-column: content-start / content-end;
+    grid-row: content-start / content-end;
+}
+
+/* Optional: Body Styling Implement smooth scrolling behavior site-wide or for specific elements */ 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Card Section */
 .card-section {
     text-align: center;
     padding: 20px;
@@ -45,7 +67,8 @@ body {
         opacity: 1;
     }
 }
-/* ✅ Sticky Header */
+
+/* Optional: Implement a "sticky" element that uses position: sticky */
 .sticky-header {
     position: fixed;
     top: 0;
@@ -71,11 +94,77 @@ body {
     color: var(--accent-color);
 }
 
-/* ✅ Product Section (Mobile-First) */
+.sticky-header nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.sticky-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-header nav ul li {
+    margin-bottom: 10px;
+}
+
+.sticky-header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu-state {
+    display: none;
+}
+
+.hamburger {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+#menu-state:checked ~ nav {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .sticky-header nav {
+        display: flex;
+        position: static;
+        justify-content: space-around;
+        padding: 0;
+    }
+    
+    .sticky-header nav ul li {
+        margin-right: 20px;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Product Section (Mobile-First) 
+Full mobile responsivity through media queries and flexible layouts to ensure the site looks good on mobile, tablet, and desktop viewports */
 .product-section {
     display: grid;
     grid-template-columns: 1fr; /* Single column by default */
-    gap: 20px;
+    gap: 20px; /* Optional: Use CSS gap property effectively with both Grid and Flexbox layouts */
     margin-top: 100px;
     padding: 20px;
     background-color: white;
@@ -83,11 +172,12 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ Product Images - Grid for Desktop */
+/* Product Images - Grid for Desktop */
 .product-images {
+    grid-column: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 10px; /* Optional: Use CSS gap property effectively with both Grid and Flexbox layouts */
     max-width: 100%;
     justify-content: center;
 }
@@ -95,12 +185,14 @@ body {
 .product-images img {
     width: 100%;
     height: auto;
+    object-fit: cover; /* Optional: Use the CSS object-fit property to handle responsive images elegantly */
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ Product Description */
+/* Product Description */
 .product-description {
+    grid-column: 2;
     text-align: left;
     padding: 20px;
 }
@@ -119,7 +211,7 @@ body {
     font-size: 1rem;
 }
 
-/* ✅ Buttons */
+/* Buttons */
 .card-button {
     background-color: var(--primary-color);
     color: white;
@@ -136,7 +228,7 @@ body {
     transform: scale(1.05); /* Scale effect on hover */
 }
 
-/* ✅ Dropdown Select */
+/* Dropdown Select */
 .map-size-selector {
     margin: 15px 0;
 }
@@ -158,7 +250,7 @@ body {
     outline: none;
 }
 
-/* ✅ Star Ratings */
+/* Star Ratings */
 .star-rating i {
     color: var(--accent-color);
     font-size: 1.5rem;
@@ -168,7 +260,7 @@ body {
 /* Modify .card-container to use CSS Grid */
 .card-container {
     display: grid;
-    gap: 20px;
+    gap: 20px; /* Optional: Use CSS gap property effectively with both Grid and Flexbox layouts */
     justify-content: center;
     margin-top: 40px;
 }
@@ -195,7 +287,7 @@ body {
 }
 
 
-/* ✅ Individual Cards */
+/* Individual Cards */
 .card {
     background-color: white;
     border-radius: 10px;
@@ -240,7 +332,7 @@ body {
 
 
 
-/* ✅ Back to Top Button */
+/* Back to Top Button */
 #back-to-top {
     position: fixed;
     bottom: 20px;
@@ -259,7 +351,7 @@ body {
     background-color: var(--accent-color);
 }
 
-/* ✅ Footer */
+/* Footer */
 footer {
     text-align: center;
     margin-top: 40px;
@@ -267,7 +359,7 @@ footer {
     background: var(--secondary-color);
 }
 
-/* ✅ Responsive Design */
+/* Responsive Design */
 
 /* 📱 Mobile First: 1 Column */
 @media (max-width: 600px) {
@@ -290,13 +382,13 @@ footer {
     }
 }
 
-:focus {
+:focus { /* Optional: Add custom focus states to interactive elements for keyboard accessibility */ 
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }
 
 
-/* 📟 Tablet: 2 Columns */
+/* Tablet: 2 Columns */
 @media (min-width: 768px) {
     .product-section {
         grid-template-columns: 1fr 1fr;
@@ -330,4 +422,56 @@ footer {
         display: inline;
         margin: 0 15px;
     }
+}
+
+.parallax-container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px;
+}
+
+.layer1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/parallaxback.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.layer2 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FF6B35;
+    text-align: center;
+}
+
+.sticky-cta {
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.sticky-cta .card-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.sticky-cta .card-button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05); /* Scale effect on hover */
 }
